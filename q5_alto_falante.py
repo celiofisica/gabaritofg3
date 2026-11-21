@@ -91,9 +91,9 @@ abas = st.tabs(["📝 Enunciado", "🧭 Estratégia", "✍️ Resolução", "�
 with abas[0]:
     c1, c2 = st.columns([3, 2])
     with c1:
-        st.markdown(
-            r"""
-<div class="enunciado">
+        with st.container(border=True):
+            st.markdown(
+                r"""
 
 Num alto-falante dinâmico, uma bobina móvel presa ao cone fica no entreferro de um ímã permanente, onde o campo é **radial**.
 Dados: $B\ell = 7{,}0$ T·m, $R_e = 6{,}0\ \Omega$, $L_e = 0{,}50$ mH, $m = 20$ g, $k = 2{,}0\times10^3$ N/m, $b = 1{,}5$ N·s/m.
@@ -108,10 +108,8 @@ Dados: $B\ell = 7{,}0$ T·m, $R_e = 6{,}0\ \Omega$, $L_e = 0{,}50$ mH, $m = 20$ 
 **(d)** *(4 pts)* Calcule $f_s$ e $|Z|$ nessa frequência. Por que $|Z(f)|$ tem um **pico** (e não um vale) em $f_s$?
 
 **(e)** *(2 pts)* Por que um fone de ouvido dinâmico, ligado à entrada de microfone, funciona como microfone?
-</div>
-""",
-            unsafe_allow_html=True,
-        )
+"""
+            )
     with c2:
         st.markdown(SVG_FALANTE, unsafe_allow_html=True)
         st.caption("Corte de um alto-falante dinâmico: o ímã cria um campo radial; a bobina presa ao cone se move axialmente.")

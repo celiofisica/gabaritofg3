@@ -25,9 +25,9 @@ Rc = 2 * np.sqrt(L / C)
 abas = st.tabs(["📝 Enunciado", "🧭 Estratégia", "✍️ Resolução", "🎛️ Laboratório", "✅ Confira", "🧠 Conceitos"])
 
 with abas[0]:
-    st.markdown(
-        r"""
-<div class="enunciado">
+    with st.container(border=True):
+        st.markdown(
+            r"""
 
 Um circuito RLC série tem $R = 20\ \Omega$, $L = 50$ mH e $C = 2{,}0\ \mu$F, alimentado por uma fonte senoidal de amplitude $V_0 = 10$ V e frequência ajustável.
 
@@ -38,10 +38,8 @@ Um circuito RLC série tem $R = 20\ \Omega$, $L = 50$ mH e $C = 2{,}0\ \mu$F, al
 **(c)** *(6 pts)* Para $f = 400$ Hz: impedância, amplitude da corrente, ângulo de fase $\phi$ e potência média. O circuito é capacitivo ou indutivo?
 
 **(d)** *(4 pts)* A fonte é removida com o capacitor carregado a 10 V. Classifique o regime, calcule $\omega_d$, o $R$ crítico e o tempo para a amplitude cair a $1/e$.
-</div>
-""",
-        unsafe_allow_html=True,
-    )
+"""
+        )
 
 with abas[1]:
     with st.expander("Dica 1 — O que acontece na ressonância?"):

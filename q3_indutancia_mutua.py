@@ -22,9 +22,9 @@ fase = np.degrees(np.arctan(XL2 / Rr))
 abas = st.tabs(["📝 Enunciado", "🧭 Estratégia", "✍️ Resolução", "🎛️ Laboratório", "✅ Confira", "🧠 Conceitos"])
 
 with abas[0]:
-    st.markdown(
-        r"""
-<div class="enunciado">
+    with st.container(border=True):
+        st.markdown(
+            r"""
 
 Duas espiras circulares coplanares e concêntricas têm raios $R_1 = 20$ cm e $R_2 = 2{,}0$ cm ($R_1\gg R_2$).
 A maior tem uma volta e conduz $i_1(t) = I_0\sin\omega t$, com $I_0 = 3{,}0$ A e $f = 1{,}0$ kHz. A menor é uma pequena bobina de
@@ -39,10 +39,8 @@ $M\approx\dfrac{\mu_0\pi N_2R_2^2}{2R_1}$. Calcule $M$.
 
 **(d)** *(4 pts)* Se a corrente $I_0\sin\omega t$ circulasse na bobina menor, qual seria a amplitude da fem na espira maior?
 Por que calcular isso **diretamente** seria muito mais trabalhoso?
-</div>
-""",
-        unsafe_allow_html=True,
-    )
+"""
+        )
 
 with abas[1]:
     with st.expander("Dica 1 — Qual é o campo no centro da espira grande?"):

@@ -21,9 +21,9 @@ eps0_ac = MU0 * ell / (2 * np.pi) * np.log((x + w) / x) * I0 * om
 abas = st.tabs(["📝 Enunciado", "🧭 Estratégia", "✍️ Resolução", "🎛️ Laboratório", "✅ Confira", "🧠 Conceitos"])
 
 with abas[0]:
-    st.markdown(
-        r"""
-<div class="enunciado">
+    with st.container(border=True):
+        st.markdown(
+            r"""
 
 Um fio retilíneo muito longo conduz $I = 20$ A. Uma espira retangular, coplanar ao fio, tem lados $\ell = 20$ cm (paralelo ao fio)
 e $w = 10$ cm (perpendicular), e resistência $R = 0{,}010\ \Omega$. O lado mais próximo do fio está à distância $x$.
@@ -35,10 +35,8 @@ e $w = 10$ cm (perpendicular), e resistência $R = 0{,}010\ \Omega$. O lado mais
 **(c)** *(4 pts)* Confirme (b) pela fem de movimento $\oint(\vec v\times\vec B)\cdot d\vec\ell$. Por que os lados perpendiculares ao fio não contribuem?
 
 **(d)** *(5 pts)* Agora a espira está **parada** em $x = 5{,}0$ cm e $I(t) = I_0\sin\omega t$, com $I_0 = 20$ A e $f = 60$ Hz. Obtenha $\varepsilon(t)$, sua amplitude e a defasagem em relação a $I(t)$.
-</div>
-""",
-        unsafe_allow_html=True,
-    )
+"""
+        )
     st.caption("Na figura da prova: corrente para cima, espira à direita do fio ⇒ B entrando no plano (⊗) na região da espira.")
 
 with abas[1]:

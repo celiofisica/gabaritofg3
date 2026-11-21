@@ -19,9 +19,9 @@ abas = st.tabs(["📝 Enunciado", "🧭 Estratégia", "✍️ Resolução", "�
 
 # ------------------------------------------------------------------ Enunciado
 with abas[0]:
-    st.markdown(
-        r"""
-<div class="enunciado">
+    with st.container(border=True):
+        st.markdown(
+            r"""
 
 Uma espira circular de raio $a = 10{,}0$ cm conduz uma corrente estacionária $I = 5{,}0$ A.
 
@@ -35,10 +35,8 @@ $B = \frac{\mu_0 I}{4\pi d}(\sin\theta_2-\sin\theta_1)$ para um segmento finito,
 $B_\square = \frac{2\sqrt2\,\mu_0 I}{\pi L}$ e calcule-o. Compare com uma espira circular **inscrita** ($a = L/2$).
 
 **(d)** *(3 pts)* Mostre que, para $z\gg a$, $B\approx \frac{\mu_0\mathfrak m}{2\pi z^3}$ com $\mathfrak m = I\pi a^2$. Qual o significado de $\mathfrak m$?
-</div>
-""",
-        unsafe_allow_html=True,
-    )
+"""
+        )
 
 # ------------------------------------------------------------------ Estratégia
 with abas[1]:
